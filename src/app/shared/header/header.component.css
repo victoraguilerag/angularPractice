@@ -1,0 +1,32 @@
+.header {
+  width: 100vw;
+  height: 10vh;
+  background: #D90429;
+  color: white;
+  font-weight: bold;
+  font-family: MONOSPACE;
+  font-size: 1.5em;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.brand {
+  margin-left: 5px;
+}
+
+.header ul {
+  list-style: none;
+  width: 40vw;
+  font-size: .7em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}

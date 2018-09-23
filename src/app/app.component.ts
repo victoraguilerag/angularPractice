@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CharactersService } from './core/characters.service'
+import { Character } from './core/character'
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'example-app';
+  title = 'Lupin III Roas'
+  characters: Character[]
+
+  constructor(
+    private characterService: CharactersService
+  ) {
+    this.characters = characterService.getCharacters()
+  }
 }

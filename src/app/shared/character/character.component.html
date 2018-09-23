@@ -1,0 +1,19 @@
+<div class="character" routerLink="/details/{{character.id}}">
+  {{character.name}}
+  <div class="etiquetas">
+    <div
+      *ngIf="character.sex"
+      [class.female]="character.sex == 'female'"
+      [class.male]="character.sex == 'male'"
+    >
+      {{character.sex}}
+    </div>
+    <div
+      *ngIf="character.side"
+      [class.female]="character.side == 'villain'"
+      [class.male]="character.side == 'hero'"
+    >
+      {{character.side}}
+    </div>
+  </div>
+</div>

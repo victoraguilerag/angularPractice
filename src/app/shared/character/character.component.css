@@ -1,0 +1,44 @@
+.character {
+  margin: 0 auto;
+  background: #EF233C;
+  box-shadow: inset 0px -2px 2px rgba(0,0,0,.2);
+  color: white;
+  height: 10vh;
+  width: 80vw;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.character:hover {
+  background: #AB233C;
+}
+
+.etiquetas {
+  height: 100%;
+  width: 20vw;
+  align-self: flex-end;
+  color: gray;
+}
+
+.etiquetas div {
+  background: white;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .5em;
+  box-shadow: inset 0 0 1px rgba(0,0,0,.3);
+}
+
+.female {
+  color: #AB233C;
+}
+
+.male {
+  color: blue;
+}
