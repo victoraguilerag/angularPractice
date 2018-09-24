@@ -5,18 +5,24 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CharacterComponent } from './shared/character/character.component';
 import { HeaderComponent } from './shared/header/header.component';
-
-//Services
-import { CharactersService } from './core/characters.service';
 import { DetailsComponent } from './pages/details/details.component'
 import { DashboardComponent } from './pages/dashboard/dashboard.component'
+import { DashboardDynamicComponent } from './pages/dashboard-dynamic/dashboard-dynamic.component'
 
-//Router
+// Services
+import { CharactersService } from './core/characters.service';
+import { DynamicService } from './dynamic/dynamic.service';
+
+// Router
 import { RouterModule, Routes } from '@angular/router';
+
+// Directive
+import { DynamicDirective } from './dynamic/dynamic.directive'
 
 const appRoutes: Routes = [
   { path: '', component: DashboardComponent, pathMatch: 'full' },
   { path: 'details/:id', component: DetailsComponent },
+  { path: 'dynamic', component: DashboardDynamicComponent },
 ];
 
 @NgModule({
@@ -25,7 +31,9 @@ const appRoutes: Routes = [
     CharacterComponent,
     HeaderComponent,
     DetailsComponent,
-    DashboardComponent
+    DashboardComponent,
+    DashboardDynamicComponent,
+    DynamicDirective
   ],
   imports: [
     BrowserModule,
@@ -34,8 +42,10 @@ const appRoutes: Routes = [
       { enableTracing: true } //debuggin purposes only
     )
   ],
+  entryComponents: [ CharacterComponent ],
   providers: [
-    CharactersService
+    CharactersService,
+    DynamicService
   ],
   bootstrap: [AppComponent]
 })

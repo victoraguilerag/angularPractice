@@ -15,7 +15,8 @@
 }
 
 .character:hover {
-  background: #AB233C;
+  background: #ABFFFF;
+  color: rgba(50,50,50,1);
 }
 
 .etiquetas {
